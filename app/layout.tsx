@@ -14,7 +14,7 @@ const josefinSans = Josefin_Sans({
 // });
 
 export const metadata: Metadata = {
-  title: "Nexter",
+  title: "Nexter | your home, your freedom",
   description: "Create with nextjs 15. with the help of grid layout",
 };
 
@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${josefinSans.variable} antialiased`}
+        className={`${josefinSans.variable} antialiased container`}
       >
         {children}
       </body>
