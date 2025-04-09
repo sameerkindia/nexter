@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: #c69963;
+  --color-primary-dark: #b28451;
+  --color-secondary: #101d2c;
+  --color-grey-light-1: #f9f7f6;
+  --color-grey-light-2: #aaa;
+  --color-grey-dark-1: #54483a;
+  --color-grey-dark-2: #6d5d4b;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
 /* :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -25,25 +39,25 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 } */
 
-:root{
+:root {
   /* COLOR VARIABLES  */
---color-primary: #c69963;
---color-primary-dark: #B28451;
---color-secondary: #101d2c;
---color-grey-light-1: #f9f7f6;
---color-grey-light-2: #aaa;
---color-grey-dark-1: #54483A;
---color-grey-dark-2: #6D5D4B;
+  --color-primary: #c69963;
+  --color-primary-dark: #b28451;
+  --color-secondary: #101d2c;
+  --color-grey-light-1: #f9f7f6;
+  --color-grey-light-2: #aaa;
+  --color-grey-dark-1: #54483a;
+  --color-grey-dark-2: #6d5d4b;
 
-/* FONT VARIABLES */
---font-primary: 'Nunito', sans-serif;
---font-display: 'Josefin Sans', sans-serif;
+  /* FONT VARIABLES */
+  --font-primary: "Nunito", sans-serif;
+  --font-display: "Josefin Sans", sans-serif;
 
-/* // RESPONSIVE BREAKPOINTS */
---bp-largest: 75em;   /*1200px*/
---bp-large: 62.5em;   /*1000px*/
---bp-medium: 50em;    /*800px*/
---bp-small: 37.5em;   /*600px*/
+  /* // RESPONSIVE BREAKPOINTS */
+  --bp-largest: 75em; /*1200px*/
+  --bp-large: 62.5em; /*1000px*/
+  --bp-medium: 50em; /*800px*/
+  --bp-small: 37.5em; /*600px*/
 }
 
 /* // COLOR VARIABLES
@@ -71,18 +85,18 @@ $bp-small: 37.5em;    // 600px; */
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
-    box-sizing: border-box;
-    /* font-size: 62.5%;
+  box-sizing: border-box;
+  font-size: 62.5%;
 
     @media only screen and (max-width: var(--bp-largest)) {
         font-size: 50%;
-    } */
+    }
 }
 
 body {
@@ -92,22 +106,29 @@ body {
   line-height: 1.6;
 }
 
-
 .container {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(
+      6rem,
+      1fr
+    ) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(
+      6rem,
+      1fr
+    ) [full-end];
 
   @media only screen and (max-width: var(--bp-large)) {
-      grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
-      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      ) [center-end] minmax(6rem, 1fr) [full-end];
   }
 
   @media only screen and (max-width: var(--bp-medium)) {
-      grid-template-rows: 6rem calc(100vh - 6rem);
+    grid-template-rows: 6rem calc(100vh - 6rem);
   }
 }
-
 
 /* Sidebar */
 
@@ -120,10 +141,10 @@ body {
   justify-content: center;
 
   @media only screen and (max-width: var(--bp-large)) {
-      grid-column: 1 / -1;
-      grid-row: 1 / 2;
-      justify-content: flex-end;
-      align-items: center;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    justify-content: flex-end;
+    align-items: center;
   }
 }
 
@@ -138,21 +159,99 @@ body {
 
   &::before,
   &::after {
-      background-color: #fff;
-      height: 2px;
-      width: 4.5rem;
-      content: "";
-      display: block;
+    background-color: #fff;
+    height: 2px;
+    width: 4.5rem;
+    content: "";
+    display: block;
   }
 
-  &::before { transform: translateY(-1.5rem); }
-  &::after { transform: translateY(1.3rem); }
+  &::before {
+    transform: translateY(-1.5rem);
+  }
+  &::after {
+    transform: translateY(1.3rem);
+  }
 
   @media only screen and (max-width: var(--bp-large)) {
-      margin-top: 0;
-      margin-right: 3rem;
+    margin-top: 0;
+    margin-right: 3rem;
 
-      &::before { transform: translateY(-1.2rem); }
-      &::after { transform: translateY(1rem); }
+    &::before {
+      transform: translateY(-1.2rem);
+    }
+    &::after {
+      transform: translateY(1rem);
+    }
+  }
+}
+
+
+/* Header */
+
+.header {
+  background-color: var(--color-grey-dark-1);
+  grid-column: full-start / col-end 6;
+  background-image: linear-gradient(rgba(var(--color-secondary), .93), rgba(var(--color-secondary), .93));
+  /* , url(../public/img/hero.jpeg) */
+  background-size: cover;
+  background-position: center;
+  padding: 8rem;
+  padding-top: 4rem;
+
+  display: grid;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+  grid-template-columns: minmax(min-content, max-content);
+  grid-row-gap: 1.5rem;
+  justify-content: center;
+
+  @media only screen and (max-width: var(--bp-medium)) {
+      grid-column: 1 / -1;
+  }
+
+  @media only screen and (max-width: var(--bp-small)) {
+      padding: 5rem;
+  }
+
+  &__logo {
+      height: 3rem;
+      justify-self: center;
+  }
+
+  &__btn {
+      align-self: start;
+      justify-self: start;
+  }
+
+  &__seenon-text {
+      display: grid;
+      grid-template-columns: 1fr max-content 1fr;
+      grid-column-gap: 1.5rem;
+      align-items: center;
+
+      font-size: 1.6rem;
+      color: var(--color-grey-light-2);
+
+      &::before,
+      &::after {
+          content: "";
+          height: 1px;
+          display: block;
+          background-color: currentColor;
+      }
+  }
+
+  &__seenon-logos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 3rem;
+      justify-items: center;
+      align-items: center;
+
+      img {
+          max-height: 2.5rem;
+          max-width: 100%;
+          filter: brightness(70%);
+      }
   }
 }
