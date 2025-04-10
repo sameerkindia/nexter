@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${josefinSans.variable} antialiased container`}
+        className={`${josefinSans.variable} main-container`}
       >
         {children}
       </body>
