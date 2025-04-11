@@ -2,12 +2,12 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="header">
-      <img src="img/logo.png" alt="Nexter logo" className="header__logo" />
+    <header className="header bg-grey-dark-1 !p-20 !pt-10" >
+      <img src="img/logo.png" alt="Nexter logo" className="header__logo h-[30px] justify-self-center" />
       <h3 className="heading-3">Your own home:</h3>
       <h1 className="heading-1">The ultimate personal freedom</h1>
-      <button className="btn header__btn">View our properties</button>
-      <div className="header__seenon-text">Seen on</div>
+      <button className="btn header__btn self-start justify-self-start">View our properties</button>
+      <div className="header__seenon-text grid grid-cols-[1fr_max-content_1fr] gap-x-[15px] items-center text-base text-grey-light-2">Seen on</div>
       <div className="header__seenon-logos">
         <img src="img/logo-bbc.png" alt="Seen on logo 1" />
         <img src="img/logo-forbes.png" alt="Seen on logo 2" />
