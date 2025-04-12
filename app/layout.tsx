@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Josefin_Sans } from "next/font/google";
+import { Geist, Geist_Mono, Josefin_Sans, Nunito } from "next/font/google";
 import "./globals.css";
 
 
 const josefinSans = Josefin_Sans({
   variable: "--font-josefin-sans",
+  subsets: ["latin"],
+});
+
+const nunito = Nunito({
+  variable: "--font-nunito",
   subsets: ["latin"],
 });
 
@@ -26,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${josefinSans.variable} main-container`}
+        className={`${josefinSans.variable} ${nunito.variable} main-container`}
       >
         {children}
       </body>
