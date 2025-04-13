@@ -357,6 +357,50 @@ body {
 }
 
 
+/* Features */
+
+.features {
+  grid-column: 3 / -2;
+
+  margin: 9.25rem 0;
+
+  @supports(display: grid) {
+      display: grid;
+      /* grid-template-columns: repeat(3, 1fr); */
+      grid-template-columns: repeat(auto-fit, minmax(15.62rem, 1fr));
+      grid-gap: 3.75rem;
+      align-items: start;
+  }
+}
+
+
+.feature {
+  float: left;
+  width: 33.3333%;
+  margin-bottom: 3.75rem;
+
+  @supports(display: grid) {
+      width: auto;
+      margin-bottom: 0;
+  }
+
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-row-gap: 15px;
+  grid-column-gap: 1.5rem;
+}
+
+.feature__icon {
+  fill: var(--color-primary);
+  width: 2.8rem;
+  height: 2.8rem;
+  grid-row: 1 / span 2;
+  transform: translateY(-10px);
+}
+
+.feature__text {
+  font-size: 1rem;
+}
 
 
 /* Typography */
