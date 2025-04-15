@@ -2,6 +2,7 @@ import Features from "@/components/Features";
 import Header from "@/components/Header";
 import Relators from "@/components/Relators";
 import Sidebar from "@/components/Sidebar";
+// import { StoryPictures } from "@/components/StoryPictures";
 import StoryContent from "@/components/StoryContent";
 import StoryPictures from "@/components/StoryPictures";
 
