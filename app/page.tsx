@@ -1,4 +1,5 @@
 import Features from "@/components/Features";
+import Gallery from "@/components/Gallery";
 import Header from "@/components/Header";
 import Homes from "@/components/Homes";
 import Relators from "@/components/Relators";
@@ -16,6 +17,7 @@ export default function Home() {
     <StoryPictures />
     <StoryContent />
     <Homes />
+    <Gallery />
     </>
   );
 }
