@@ -654,6 +654,51 @@ body {
   }
 
 
+  /* Footer */
+
+  .footer {
+    background-color: var(--color-secondary);
+    grid-column: 2 / -1;
+    padding: 80px;
+}
+
+.nav {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.nav__link:link,
+    .nav__link:visited {
+        font-size: 14px;
+        color: #fff;
+        text-decoration: none;
+        font-family: var(--font-display);
+        text-transform: uppercase;
+        text-align: center;
+        padding: 15px;
+        display: block;
+        transition: all .2s;
+    }
+
+    .nav__link:hover,
+    .nav__link:active {
+        background-color: rgba(#fff, .05);
+        transform: translateY(-3px);
+    }
+
+.copyright {
+    font-size: 14PX;
+    color: var(--color-grey-light-2);
+    margin-top: 60PX;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 70%;
+}
+
 
 
 /* Typography */
