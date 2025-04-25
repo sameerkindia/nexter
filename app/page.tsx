@@ -1,4 +1,5 @@
 import Features from "@/components/Features";
+import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
 import Header from "@/components/Header";
 import Homes from "@/components/Homes";
@@ -18,6 +19,7 @@ export default function Home() {
     <StoryContent />
     <Homes />
     <Gallery />
+    <Footer />
     </>
   );
 }
