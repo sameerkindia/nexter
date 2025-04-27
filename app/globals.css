@@ -320,13 +320,14 @@ body {
 
   margin: 9.25rem 0;
 
-  @supports (display: grid) {
-    display: grid;
-    /* grid-template-columns: repeat(3, 1fr); */
+  /* @supports (display: grid) {
+    grid-template-columns: repeat(3, 1fr);
     grid-template-columns: repeat(auto-fit, minmax(15.62rem, 1fr));
     grid-gap: 3.75rem;
     align-items: start;
-  }
+  } */
+
+  @apply col-[3_/_span_-2];
 }
 
 .feature {
