@@ -317,8 +317,12 @@ body {
 
 .features {
   grid-column: 3 / -2;
+  display: grid;
 
   margin: 9.25rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(15.62rem, 1fr));
+  grid-gap: 3.75rem;
+  align-items: start;
 
   /* @supports (display: grid) {
     grid-template-columns: repeat(3, 1fr);
