@@ -657,10 +657,13 @@ body {
 
 .heading-1 {
   font-family: var(--font-display);
-  font-weight: 400;
+  /* font-weight: 400;
   font-size: 45px;
   color: var(--color-grey-light-1);
+  */
   line-height: 1;
+
+  @apply text-grey-light-1 text-4xl 2lg:text-[45px] font-normal;
 }
 
 .heading-2 {
