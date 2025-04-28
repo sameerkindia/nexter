@@ -11,10 +11,10 @@
   --color-grey-dark-1: #54483a;
   --color-grey-dark-2: #6d5d4b;
   --breakpoint-2md: 62.5em; /*1000px*/
-  ----breakpoint-largest: 75em; /*1200px*/
-  ----breakpoint-large: 62.5em; /*1000px*/
-  ----breakpoint-medium: 50em; /*800px*/
-  ----breakpoint-small: 37.5em; /*600px*/
+  --breakpoint-2lg: 75em; /*1200px*/
+  --breakpoint-large: 62.5em; /*1000px*/
+  --breakpoint-md: 50em; /*800px*/
+  --breakpoint-sm: 37.5em; /*600px*/
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -678,24 +678,30 @@ body {
   }
 }
 
-.heading-2--light {
-  color: var(--color-grey-light-1);
-}
-
-.heading-2--dark {
-  color: var(--color-grey-dark-1);
-}
-
 .heading-3 {
-  font-size: 1rem;
-  color: var(--color-primary);
-  text-transform: uppercase;
+  /* font-size: 1rem; */
+  /* color: var(--color-primary);
+  text-transform: uppercase; */
+
+  @apply text-primary uppercase text-[12.8px] 2lg:text-base;
 }
 
 .heading-4 {
   font-family: var(--font-display);
   font-weight: 400;
   font-size: 19px;
+
+  @apply font-normal text-[15.2px] 2lg:text-[19px]
+}
+
+.heading-2--light {
+  /* color: var(--color-grey-light-1); */
+  @apply text-grey-light-1;
+}
+
+.heading-2--dark {
+  /* color: var(--color-grey-dark-1); */
+  @apply text-grey-dark-1
 }
 
 .heading-4--light {
@@ -706,7 +712,7 @@ body {
 }
 
 .btn {
-  background-color: var(--color-primary);
+  /* background-color: var(--color-primary);
   color: #fff;
   border: none;
   border-radius: 0;
@@ -715,11 +721,16 @@ body {
   text-transform: uppercase;
   padding: 18px 30px;
   cursor: pointer;
+  */
+
+  font-family: var(--font-display);
   transition: all 0.2s;
 
-  &:hover {
+  @apply uppercase text-xs 2lg:text-[15px] border-none text-white bg-primary cursor-pointer px-6 2lg:px-[30px] py-[14px] 2lg:py-[18px];
+
+  /* &:hover {
     background-color: var(--color-primary-dark);
-  }
+  } */
 }
 
 .mb-sm {
