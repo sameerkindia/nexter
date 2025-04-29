@@ -317,16 +317,21 @@ body {
 
 .features {
   grid-column: 3 / -2;
+  display: grid;
 
   margin: 9.25rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(15.62rem, 1fr));
+  grid-gap: 3.75rem;
+  align-items: start;
 
-  @supports (display: grid) {
-    display: grid;
-    /* grid-template-columns: repeat(3, 1fr); */
+  /* @supports (display: grid) {
+    grid-template-columns: repeat(3, 1fr);
     grid-template-columns: repeat(auto-fit, minmax(15.62rem, 1fr));
     grid-gap: 3.75rem;
     align-items: start;
-  }
+  } */
+
+  @apply col-[3_/_span_-2];
 }
 
 .feature {
@@ -657,10 +662,13 @@ body {
 
 .heading-1 {
   font-family: var(--font-display);
-  font-weight: 400;
+  /* font-weight: 400;
   font-size: 45px;
   color: var(--color-grey-light-1);
+  */
   line-height: 1;
+
+  @apply text-grey-light-1 text-4xl 2lg:text-[45px] font-normal;
 }
 
 .heading-2 {
