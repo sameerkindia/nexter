@@ -252,16 +252,19 @@ body {
   }
 
   & .header__seenon-logos {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 30px;
     justify-items: center;
-    align-items: center;
+    align-items: center; */
+
+    @apply grid grid-cols-4 gap-x-6 2lg:gap-x-[30px] justify-items-center items-center ;
 
     img {
-      max-height: 25px;
+      /* max-height: 25px;
       max-width: 100%;
-      filter: brightness(70%);
+      filter: brightness(70%); */
+      @apply brightness-[70%] max-w-full max-h-5 2lg:max-h-[25px]
     }
   }
 }
