@@ -300,16 +300,20 @@ body {
   }
 
   & .realtors__img {
-    width: 70px;
+    /* width: 70px;
     border-radius: 50%;
-    display: block;
+    display: block; */
+
+    @apply block w-14 2lg:w-[70px] rounded-full;
   }
 
   & .realtors__sold {
-    text-transform: uppercase;
+    /* text-transform: uppercase;
     color: var(--color-grey-light-2);
     margin-top: -3px;
-    font-size: 10px;
+    font-size: 10px; */
+
+    @apply uppercase text-grey-light-2 -mt-[3px] text-[8px] 2lg:text-[10px];
   }
 }
 
