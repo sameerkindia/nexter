@@ -10,6 +10,7 @@
   --color-grey-light-2: #aaa;
   --color-grey-dark-1: #54483a;
   --color-grey-dark-2: #6d5d4b;
+  --breakpoint-lg: 1025px; /*1025px*/
   --breakpoint-2md: 62.5em; /*1000px*/
   --breakpoint-2lg: 75em; /*1200px*/
   --breakpoint-large: 62.5em; /*1000px*/
@@ -339,6 +340,7 @@ body {
   } */
 
   @apply col-[3_/_span_-2];
+
 }
 
 .feature {
@@ -413,8 +415,8 @@ body {
 }
 
 .story__content {
-  background-color: var(--color-grey-light-1);
-  grid-column: 7 / -1;
+  /* background-color: var(--color-grey-light-1);
+  grid-column: 7 / -1; */
 
   padding: 3.75rem 8vw;
 
@@ -433,6 +435,8 @@ body {
     grid-column: 1 / -1;
     grid-row: 5 / 6;
   }
+
+  @apply bg-grey-light-1 col-[7_/-1]
 }
 
 .story__text {
