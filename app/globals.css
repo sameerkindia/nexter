@@ -132,13 +132,21 @@ body {
   grid-template-rows: 3.75rem calc(100vh - 3.75rem);
 
   @media (min-width: 800px) {
-    grid-template-rows: 3.75rem 80vh min-content 40vw repeat(3, min-content);
+    grid-template-rows: 48px 80vh min-content 40vw repeat(3, min-content);
     grid-template-columns:
       minmax(3.75rem, 1fr) repeat(8, minmax(min-content, 8.75rem))
       minmax(3.75rem, 1fr);
   }
 
   @media (min-width: 1000px) {
+    grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns: 4rem minmax(3.75rem, 1fr) repeat(
+        8,
+        minmax(min-content, 8.75rem)
+      ) minmax(3.75rem, 1fr);
+  }
+
+  @media (min-width: 1200px) {
     grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
     grid-template-columns: 5rem minmax(3.75rem, 1fr) repeat(
         8,
@@ -184,9 +192,22 @@ body {
 .nav-btn::after {
   background-color: #fff;
   height: 2px;
-  width: 45px;
+  width: 36px;
   content: "";
   display: block;
+}
+
+.nav-btn::before {
+  transform: translateY(-10px);
+}
+.nav-btn::after {
+  transform: translateY(10px);
+}
+
+@media (min-width: 1200px) {
+.nav-btn::before,
+.nav-btn::after {
+  width: 45px;
 }
 
 .nav-btn::before {
@@ -194,6 +215,7 @@ body {
 }
 .nav-btn::after {
   transform: translateY(13px);
+}
 }
 
 @media only screen and (max-width: var(--bp-large)) {
@@ -684,16 +706,21 @@ body {
 
 .heading-2 {
   font-family: var(--font-display);
-  font-weight: 400;
-  font-size: 40px;
-  font-style: italic;
-  line-height: 1;
+  /* font-weight: 400; */
+  /* font-size: 40px; */
+  /* font-style: italic; */
+  /* line-height: 1; */
+
+  
+  @apply  text-[32px] lg:text-[40px] italic leading-[1] font-normal;
 
   &--light {
-    color: var(--color-grey-light-1);
+    /* color: var(--color-grey-light-1); */
+    @apply text-grey-light-1;
   }
   &--dark {
-    color: var(--color-grey-dark-1);
+    /* color: var(--color-grey-dark-1); */
+    @apply text-grey-dark-1;
   }
 }
 
@@ -739,7 +766,7 @@ body {
   font-size: 15px;
   text-transform: uppercase;
   padding: 18px 30px;
-  cursor: pointer;
+  cursor: pointer; 
   */
 
   font-family: var(--font-display);
