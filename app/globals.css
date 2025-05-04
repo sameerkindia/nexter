@@ -680,30 +680,37 @@ body {
 /* Footer */
 
 .footer {
-  background-color: var(--color-secondary);
+  /* background-color: var(--color-secondary);
   grid-column: 2 / -1;
-  padding: 80px;
+  padding: 80px; */
+
+  @apply bg-secondary col-[2_/-1] p-20
 }
 
 .nav {
-  list-style: none;
+  /* list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-gap: 20px;
-  align-items: center;
+  align-items: center; */
+
+  @apply list-none grid grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] gap-5 items-center;
 }
 
 .nav__link:link,
 .nav__link:visited {
-  font-size: 14px;
+  /* font-size: 14px;
   color: #fff;
-  text-decoration: none;
-  font-family: var(--font-display);
   text-transform: uppercase;
   text-align: center;
   padding: 15px;
-  display: block;
+  display: block; */
+
+  text-decoration: none;
+  font-family: var(--font-display);
   transition: all 0.2s;
+
+  @apply text-[14px] text-white uppercase text-center p-[15px] block;
 }
 
 .nav__link:hover,
