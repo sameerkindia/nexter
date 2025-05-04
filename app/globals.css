@@ -547,24 +547,29 @@ body {
 
 .home__location,
 .home__rooms {
-  margin-top: 25px;
+  /* margin-top: 25px; */
+  @apply mt-[25px];
 }
 
 .home__location,
 .home__rooms,
 .home__area,
 .home__price {
-  font-size: 15px;
+  /* font-size: 15px;
   margin-left: 20px;
 
   display: flex;
-  align-items: center;
+  align-items: center; */
+
+  @apply text-[12px] lg:text-[15px] ml-5 flex items-center;
 
   svg {
-    fill: var(--color-primary);
+    /* fill: var(--color-primary);
     height: 20px;
     width: 20px;
-    margin-right: 10px;
+    margin-right: 10px; */
+
+    @apply fill-primary h-4 lg:h-5 w-4 lg:w-5 mr-2 lg:mr-2.5
   }
 }
 
