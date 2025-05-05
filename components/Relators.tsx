@@ -2,7 +2,7 @@ import React from "react";
 
 const Relators = () => {
   return (
-    <div className="realtors bg-secondary col-[9/-1] p-[30px] grid content-center justify-center justify-items-center gap-y-5">
+    <div className="realtors bg-secondary col-span-full md:col-[8/-1] 2md:col-[9/-1] !p-6 md:!p-[30px] grid content-center justify-center justify-items-center gap-y-5">
       <h3 className="heading-3">Top 3 Realtors</h3>
       <div className="realtors__list">
         <img
