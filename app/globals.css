@@ -11,7 +11,7 @@
   --color-grey-dark-1: #54483a;
   --color-grey-dark-2: #6d5d4b;
   --breakpoint-lg: 1025px; /*1025px*/
-  --breakpoint-2md: 62.5em; /*1000px*/
+  --breakpoint-2md: 1001px; /*1000px*/
   --breakpoint-2lg: 75em; /*1200px*/
   --breakpoint-large: 62.5em; /*1000px*/
   --breakpoint-md: 50em; /*800px*/
@@ -131,19 +131,24 @@ body {
 
   grid-template-rows: 3.75rem calc(100vh - 3.75rem);
 
+  grid-template-rows: 48px calc(100vh - 48px);
+  grid-template-columns: minmax(48px, 1fr) repeat(8, minmax(min-content, 112px)) minmax(48px, 1fr);
+
   @media (min-width: 800px) {
     grid-template-rows: 48px 80vh min-content 40vw repeat(3, min-content);
-    grid-template-columns:
+    /* grid-template-columns:
       minmax(3.75rem, 1fr) repeat(8, minmax(min-content, 8.75rem))
-      minmax(3.75rem, 1fr);
+      minmax(3.75rem, 1fr); */
+    grid-template-columns: minmax(48px, 1fr) repeat(8, minmax(min-content, 112px)) minmax(48px, 1fr);;
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: 1001px) {
     grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-    grid-template-columns: 4rem minmax(3.75rem, 1fr) repeat(
+    /* grid-template-columns: 4rem minmax(3.75rem, 1fr) repeat(
         8,
         minmax(min-content, 8.75rem)
-      ) minmax(3.75rem, 1fr);
+      ) minmax(3.75rem, 1fr); */
+    grid-template-columns: 4rem minmax(48px, 1fr) repeat(8, minmax(min-content, 112px)) minmax(48px, 1fr);;
   }
 
   @media (min-width: 1200px) {
