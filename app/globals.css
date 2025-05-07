@@ -195,11 +195,14 @@ body {
 
 .nav-btn::before,
 .nav-btn::after {
-  background-color: #fff;
+  content: "";
+
+  /* background-color: #fff;
   height: 2px;
   width: 36px;
-  content: "";
-  display: block;
+  display: block; */
+
+  @apply bg-white h-0.5 w-9 block;
 }
 
 .nav-btn::before {
@@ -235,21 +238,23 @@ body {
 /* Header */
 
 .header {
-  grid-column: 2 / span 7;
+  /* grid-column: 2 / span 7; */
 
-  display: grid;
+  /* display: grid;
   grid-template-rows: 1fr min-content minmax(60px, min-content) 1fr;
   grid-template-columns: minmax(min-content, max-content);
   grid-row-gap: 15px;
-  justify-content: center;
+  justify-content: center; */
 
-  @media only screen and (max-width: var(--bp-medium)) {
+  /* @media only screen and (max-width: var(--bp-medium)) {
     grid-column: 1 / -1;
-  }
+  } */
 
   @media only screen and (max-width: var(--bp-small)) {
     padding: 5rem;
   }
+
+  @apply grid col-span-full md:col-[1_/span_7] 2md:col-[2_/span_7] grid-rows-[1fr_min-content_minmax(60px,_min-content)_1fr] grid-cols-[minmax(min-content_,max-content)] gap-y-[15px] justify-center;
 
   /* & .header__logo {
     height: 3rem;
@@ -310,12 +315,12 @@ body {
   justify-items: center;
   grid-row-gap: 2rem; */
 
-  @media only screen and (max-width: var(--bp-medium)) {
+  /* @media only screen and (max-width: var(--bp-medium)) {
     grid-column: 1 / -1;
-  }
+  } */
 
   & .realtors__list {
-    display: grid;
+    /* display: grid;
     grid-template-columns: max-content max-content;
     grid-column-gap: 20px;
     grid-row-gap: 5vh;
@@ -327,7 +332,9 @@ body {
 
     @media only screen and (max-width: var(--bp-small)) {
       grid-template-columns: min-content max-content;
-    }
+    } */
+
+    @apply grid grid-cols-[max-content_max-content] sm:grid-cols-[repeat(3,_max-content_max-content)] md:grid-cols-[max-content_max-content] gap-x-5 gap-y-[5vh] items-center;
   }
 
   & .realtors__img {
@@ -370,7 +377,7 @@ body {
       grid-template-columns: repeat(auto-fit, minmax(15.62rem, 1fr));
     }
 
-  @apply grid gap-12 lg:gap-14 items-start col-[3_/_-2] py-28 lg:py-[9.5rem];
+  @apply grid gap-12 lg:gap-14 items-start col-[2_/_-2] 2md:col-[3_/_-2] py-28 lg:py-[9.5rem];
 
 }
 
